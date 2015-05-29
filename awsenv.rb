@@ -90,5 +90,7 @@ class Awsenv < Formula
 
     # Check it is not longer available
     assert_equal false, shell_output("#{bin}/awsenv --password=test123 list").include?("demoenv")
+
+    # Test for travis
   end
 end

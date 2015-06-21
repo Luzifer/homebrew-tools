@@ -3,9 +3,9 @@ require "language/go"
 class License < Formula
   homepage "https://github.com/Luzifer/license"
   desc "license is a small helper to add licenses to your work"
-  url "https://github.com/Luzifer/license/archive/v1.0.0.tar.gz"
+  url "https://github.com/Luzifer/license/archive/v1.1.1.tar.gz"
   head "https://github.com/Luzifer/license.git"
-  sha256 "eeffc14c8ee561bafc8167d7676accb15f584bb909a93a7002c7cd3fd9261141"
+  sha256 "7bee7d99d0144c72c825edeff6731dedafeb4ecedb808b515023605275af29a5"
 
   depends_on "go" => :build
 
@@ -32,7 +32,7 @@ class License < Formula
     ENV.append_path "PATH", "#{ENV["GOPATH"]}/bin"
 
     Language::Go.stage_deps resources, buildpath/"src"
-    system "go", "build", "-o", "license"
+    system "go", "build", "-ldflags", "-X main.version #{version}", "-o", "license"
     bin.install "license"
   end
 

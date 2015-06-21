@@ -3,9 +3,9 @@ require "language/go"
 class License < Formula
   homepage "https://github.com/Luzifer/license"
   desc "license is a small helper to add licenses to your work"
-  url "https://github.com/Luzifer/license/archive/v1.1.1.tar.gz"
+  url "https://github.com/Luzifer/license/archive/v1.1.2.tar.gz"
   head "https://github.com/Luzifer/license.git"
-  sha256 "7bee7d99d0144c72c825edeff6731dedafeb4ecedb808b515023605275af29a5"
+  sha256 "37037a9a8640e517c95215ed1c568dcfe25e15b920a1fa8af64cacd39f4044e3"
 
   depends_on "go" => :build
 

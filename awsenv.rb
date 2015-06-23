@@ -3,9 +3,9 @@ require "language/go"
 class Awsenv < Formula
   homepage "https://github.com/Luzifer/awsenv"
   desc "awsenv is a credential store for people using one or more AWS account"
-  url "https://github.com/Luzifer/awsenv/archive/v0.4.3.tar.gz"
+  url "https://github.com/Luzifer/awsenv/archive/v0.5.0.tar.gz"
   head "https://github.com/Luzifer/awsenv.git"
-  sha256 "d5169640af71476e52db561c8fa8c2f0655dfd7ffc8bf8f1370c644c4f1d4839"
+  sha256 "1834fcc3cfa3c7ab2872f2b046c88336e8a718a4563c8d35a0787d17b3442dba"
 
   depends_on "go" => :build
 
@@ -67,7 +67,7 @@ class Awsenv < Formula
     ENV.append_path "PATH", "#{ENV["GOPATH"]}/bin"
 
     Language::Go.stage_deps resources, buildpath/"src"
-    system "go", "build", "-o", "awsenv"
+    system "go", "build", "-ldflags", "-X main.version #{version}", "-o", "awsenv"
     bin.install "awsenv"
   end
 

@@ -3,9 +3,9 @@ require "language/go"
 class Awsenv < Formula
   homepage "https://github.com/Luzifer/awsenv"
   desc "awsenv is a credential store for people using one or more AWS account"
-  url "https://github.com/Luzifer/awsenv/archive/v0.5.0.tar.gz"
+  url "https://github.com/Luzifer/awsenv/archive/v0.5.1.tar.gz"
   head "https://github.com/Luzifer/awsenv.git"
-  sha256 "1834fcc3cfa3c7ab2872f2b046c88336e8a718a4563c8d35a0787d17b3442dba"
+  sha256 "5c3ea9071c6ad3120b314ac04086b36b4d8e12051c33bd2a6e2ba3925725b0da"
 
   depends_on "go" => :build
 
@@ -14,9 +14,9 @@ class Awsenv < Formula
         :revision => "55eb11d21d2a31a3cc93838241d04800f52e823d"
   end
 
-  go_resource "github.com/awslabs/aws-sdk-go" do
-    url "https://github.com/awslabs/aws-sdk-go.git",
-        :revision => "edb939203c7444ebb16b7d4c40c16124f53b6266"
+  go_resource "github.com/aws/aws-sdk-go" do
+    url "https://github.com/aws/aws-sdk-go.git",
+        :revision => "8bdb2521482f442bbab55cc9f716231d69565581"
   end
 
   go_resource "github.com/gorilla/context" do

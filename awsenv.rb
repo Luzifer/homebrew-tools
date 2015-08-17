@@ -1,11 +1,11 @@
 require "language/go"
 
 class Awsenv < Formula
+  desc "is a credential store for people with multiple AWS accounts"
   homepage "https://github.com/Luzifer/awsenv"
-  desc "awsenv is a credential store for people using one or more AWS account"
-  url "https://github.com/Luzifer/awsenv/archive/v0.5.1.tar.gz"
+  url "https://github.com/Luzifer/awsenv/archive/v0.5.2.tar.gz"
+  sha256 "6fd29866491e11519f2325294d84eea6fbe8ad5d7c4d9f8bc7fe24465c9157fb"
   head "https://github.com/Luzifer/awsenv.git"
-  sha256 "5c3ea9071c6ad3120b314ac04086b36b4d8e12051c33bd2a6e2ba3925725b0da"
 
   depends_on "go" => :build
 
@@ -16,7 +16,7 @@ class Awsenv < Formula
 
   go_resource "github.com/aws/aws-sdk-go" do
     url "https://github.com/aws/aws-sdk-go.git",
-        :revision => "8bdb2521482f442bbab55cc9f716231d69565581"
+        :revision => "1c75632eb9b77bb3d8e6416fbd8f3e98fc1367db"
   end
 
   go_resource "github.com/gorilla/context" do
@@ -41,12 +41,12 @@ class Awsenv < Formula
 
   go_resource "github.com/spf13/cobra" do
     url "https://github.com/spf13/cobra.git",
-        :revision => "bba56042cf767e329430e7c7f68c3f9f640b4b8b"
+        :revision => "385fc87e4343efec233811d3d933509e8975d11a"
   end
 
   go_resource "github.com/spf13/pflag" do
     url "https://github.com/spf13/pflag.git",
-        :revision => "f1e68ce945b0710375b5cccee37318a3d13fdf8c"
+        :revision => "67cbc198fd11dab704b214c1e629a97af392c085"
   end
 
   go_resource "github.com/vaughan0/go-ini" do

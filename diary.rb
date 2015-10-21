@@ -3,9 +3,9 @@ require "language/go"
 class Diary < Formula
   homepage "https://github.com/Luzifer/diary"
   desc "diary is a small utility to write a personal, encrypted markdown diary"
-  url "https://github.com/Luzifer/diary/archive/v0.1.2.tar.gz"
+  url "https://github.com/Luzifer/diary/archive/v0.2.0.tar.gz"
   head "https://github.com/Luzifer/diary.git"
-  sha256 "8374f25896980b96f35c94ccf7f0a4f5ce9412b3560c841d53b80737f78c369e"
+  sha256 "b95e733b9cd95ff44d18a8ec406553b272cbe6a84254a470dae0bb1216e8d891"
 
   depends_on "go" => :build
 

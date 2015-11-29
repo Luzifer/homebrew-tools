@@ -3,8 +3,8 @@ require "language/go"
 class Awsenv < Formula
   desc "is a credential store for people with multiple AWS accounts"
   homepage "https://github.com/Luzifer/awsenv"
-  url "https://github.com/Luzifer/awsenv/archive/v0.6.0.tar.gz"
-  sha256 "6bebc7d37575c465de07a25d7da142ceecac50ac9d26326a97b9b3bd5afeb21c"
+  url "https://github.com/Luzifer/awsenv/archive/v0.7.0.tar.gz"
+  sha256 "acaf4d922c46d00e48ab7551bcdb264a6a2782cf549d5e572e14f2790738a582"
   head "https://github.com/Luzifer/awsenv.git"
 
   depends_on "go" => :build

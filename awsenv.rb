@@ -1,20 +1,11 @@
 class Awsenv < Formula
   desc "is a credential store for people with multiple AWS accounts"
   homepage "https://github.com/Luzifer/awsenv"
-  url "https://github.com/Luzifer/awsenv/archive/v0.11.0.tar.gz"
-  sha256 "23b4f89eb7c6fdd0624bb9cb2e8826cdfb580fdc2711ae399d79c61abc5df597"
-  head "https://github.com/Luzifer/awsenv.git"
-
-  depends_on "go" => :build
+  url "https://gobuilder.me/get/github.com/Luzifer/awsenv/awsenv_v0.11.0_darwin-amd64.zip"
+  sha256 "592360d1521e36e4c581679d2b6b03e82aad4f9951b13691510f54d7f789643d"
 
   def install
-    mkdir_p "#{buildpath}/src/github.com/Luzifer/"
-    ln_s buildpath, "#{buildpath}/src/github.com/Luzifer/awsenv"
-
-    ENV["GOPATH"] = buildpath
-
-    system "go", "install", "-ldflags", "-X main.version #{version}", "github.com/Luzifer/awsenv"
-    bin.install "#{buildpath}/bin/awsenv"
+    bin.install "awsenv"
   end
 
   test do

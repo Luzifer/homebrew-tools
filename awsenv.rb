@@ -1,8 +1,8 @@
 class Awsenv < Formula
   desc "is a credential store for people with multiple AWS accounts"
   homepage "https://github.com/Luzifer/awsenv"
-  url "https://github.com/Luzifer/awsenv/archive/v0.10.2.tar.gz"
-  sha256 "263b1dc5b654d8404b8ad7258ad7c61c0627bc3bf9215b18bdc932fca13f44c1"
+  url "https://github.com/Luzifer/awsenv/archive/v0.11.0.tar.gz"
+  sha256 "23b4f89eb7c6fdd0624bb9cb2e8826cdfb580fdc2711ae399d79c61abc5df597"
   head "https://github.com/Luzifer/awsenv.git"
 
   depends_on "go" => :build
